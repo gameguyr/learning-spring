@@ -6,6 +6,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import java.util.Collection;
+
 /**
  * This class is showing that we can automatically run the calculator and instantiate the necessary
  * components.  The @Bean method of type ApplicationRunner will automatically call its "run" method
@@ -35,4 +37,10 @@ public class CalculatorApplicationWithRunner {
                                        @Value("${op}") char op){
         return args -> calculator.calculate(lhs, rhs, op);
     }
+
+    // By annotating the calculator with the @Component, we don't actually need this constructor
+//    @Bean
+//    public Calculator calculator(Collection<Operation> operations) {
+//        return new Calculator(operations);
+//    }
 }

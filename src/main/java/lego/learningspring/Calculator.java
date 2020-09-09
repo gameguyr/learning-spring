@@ -1,8 +1,10 @@
 package lego.learningspring;
 
 
-import java.util.Collection;
+import org.springframework.stereotype.Component;
 
+import java.util.Collection;
+@Component
 public class Calculator {
     private Collection<Operation> operations;
 
