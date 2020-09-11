@@ -1,4 +1,4 @@
-package lego.learningspring;
+package lego.learningSpring;
 
 import org.springframework.stereotype.Component;
 

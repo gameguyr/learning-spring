@@ -1,4 +1,4 @@
-package lego.learningspring;
+package lego.learningSpring;
 
 public interface Operation {
         int apply(int lhs, int rhs);

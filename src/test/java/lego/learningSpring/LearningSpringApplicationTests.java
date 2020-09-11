@@ -1,4 +1,4 @@
-package lego.learningspring;
+package lego.learningSpring;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

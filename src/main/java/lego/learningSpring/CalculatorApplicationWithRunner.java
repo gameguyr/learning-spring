@@ -1,12 +1,10 @@
-package lego.learningspring;
+package lego.learningSpring;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-
-import java.util.Collection;
 
 /**
  * This class is showing that we can automatically run the calculator and instantiate the necessary

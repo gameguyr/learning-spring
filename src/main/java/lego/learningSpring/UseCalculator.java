@@ -1,9 +1,6 @@
-package lego.learningspring;
+package lego.learningSpring;
 
-import java.nio.channels.CancelledKeyException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 
 public class UseCalculator {
 

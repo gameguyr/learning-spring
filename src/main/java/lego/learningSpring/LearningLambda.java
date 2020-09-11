@@ -1,4 +1,4 @@
-package lego.learningspring;
+package lego.learningSpring;
 
 interface StringFunction {
     String run(String str);
