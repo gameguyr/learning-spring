@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Employee Confirmation</title>
+</head>
+
+    <body>
+        <!-- Step 1: bind the span below to the firstName attribute of the Employee instance in the Model -->
+        First Name: <span th:text="${employee.firstName}"/><br/>
+        <!-- Step 2: bind the span below to the lastName attribute of the Employee instance in the Model -->
+        Last Name: <span th:text="${employee.lastName}"/><br/>
+        <!-- Step 3: bind the span below to the jobTitle attribute of the Employee instance in the Model -->
+        Job Title: <span th:text="${employee.jobTitle}"/><br/>
+        <!-- Step 4: bind the span below to the employeeId attribute of the Employee instance in the Model -->
+        Employee Id: <span th:text="${employee.employeeId}"/><br/>
+    </body>
+
+</html>
