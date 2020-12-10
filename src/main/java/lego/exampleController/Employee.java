@@ -1,10 +1,23 @@
 package lego.exampleController;
 
-public class Employee {
+import org.hibernate.validator.constraints.*;
 
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.NotNull;
+
+
+public class Employee {
+    // I am trying to add some form validation here
+
+    @NotBlank
     private String firstName;
+
+    @NotBlank
     private String lastName;
+
+    @NotBlank
     private String jobTitle;
+
     private Long employeeId;
 
     public String getFirstName() {

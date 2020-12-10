@@ -2,7 +2,10 @@ package lego.exampleController;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 //Step 1: turn this class into a Spring MVC controller
 @Controller
@@ -22,9 +25,19 @@ public class EmployeeController {
     //The method will delegate the view to a Thymeleaf template in confirmation.html
     //Hint: use the @ModelAttribute annotation
     @PostMapping("/confirmation")
-    public String displayConfirmation(@ModelAttribute Employee employee) {
+    public String displayConfirmation(@ModelAttribute @Valid Employee employee, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            System.out.println("Validation Failed!");
+            return "inputform";
+        } else {
+            return "confirmation";
+        }
 
-        return "confirmation";
+    }
+
+    @GetMapping("/error")
+    public String displayError(Model model) {
+        return "error";
     }
 
 }

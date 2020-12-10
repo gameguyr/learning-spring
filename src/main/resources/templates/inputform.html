@@ -10,32 +10,49 @@
 <!-- step 1: Update this form to send an HTTP POST request to the following URI: "/confirmation" -->
 <form th:action="@{/confirmation}" th:object="${employee}" method="post">
     <table>
-        <tr><td>First Name</td>
+        <tr>
+            <td>First Name</td>
             <td>
                 <!-- Step 2: bind this field to the firstName attribute of the Employee instance in the Model -->
                 <input type="text" th:field="*{firstName}"/>
             </td>
+            <td th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"> </td>
+
         </tr>
-        <tr><td>Last Name</td>
+        <tr>
+            <td>Last Name</td>
             <td>
                 <!-- Step 3: bind this field to the lastName attribute of the Employee instance in the Model -->
                 <input type="text" th:field="*{lastName}"/>
             </td>
+            <td th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"> </td>
         </tr>
-        <tr><td>Job Title</td><td>
-            <!-- Step 4: bind this drop down field to the jobTitle attribute of the Employee instance in the Model -->
-            <select th:field="*{jobTitle}">
-                <option value="" label=" "></option>
-                <option value="assoc">Associate</option>
-                <option value="mgr">Manager</option>
-                <option value="dir">Director</option>
-            </select>
-        </td></tr>
-        <tr><td>Employee Id</td><td>
+        <tr>
+            <td>Job Title</td>
+            <td>
+                <!-- Step 4: bind this drop down field to the jobTitle attribute of the Employee instance in the Model -->
+                <select th:field="*{jobTitle}">
+                    <option value="" label=" "></option>
+                    <option value="assoc">Associate</option>
+                    <option value="mgr">Manager</option>
+                    <option value="dir">Director</option>
+                </select>
+            </td>
+            <td th:if="${#fields.hasErrors('jobTitle')}" th:errors="*{jobTitle}"> </td>
+        </tr>
+        <tr>
+            <td>Employee Id</td>
+            <td>
             <!-- Step 5: bind this field to the employeeId attribute of the Employee instance in the Model -->
             <input type="number" th:field="*{employeeId}"/>
-        </td></tr>
-        <tr><td></td><td><input type="Submit" value="Submit"/></td></tr>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="Submit" value="Submit"/>
+            </td>
+        </tr>
     </table>
 </form>
 </body>
